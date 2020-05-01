@@ -341,7 +341,7 @@
 - (void) textTapped:(UITapGestureRecognizer *) gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
         [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
-        NSLog(@"fjeeddfj");
+        NSLog(@"Test print details  %@", self.detailsArray.description);
         UILabel *someLabel = (UILabel *)gestureRecognizer.view;
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];

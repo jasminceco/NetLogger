@@ -78,10 +78,10 @@
 }
 - (IBAction)aboutPressed:(id)sender {
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"About "
-                                                                   message:@"This cocoapod is brought to you by the good folks at VersionN Studios. \n\nIf you have any feedback please write to info@versionn.com or say hi on the github page: https://github.com/croozeus/NetLogger"
+                                                                   message:@"This cocoapod is forked version of  VersionN Studios. \n\nIf you have any feedback please write to jasmin.ceco@gmail.com or say hi on the github page: https://github.com/jasminceco/NetLogger"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Alrighty" style:UIAlertActionStyleDefault
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {}];
     
     [alert addAction:defaultAction];
