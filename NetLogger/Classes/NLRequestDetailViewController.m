@@ -206,6 +206,14 @@
         }
         cell.titletextLabel.text = title;
         cell.detailtextLabel.text = detail;
+        cell.detailtextLabel.userInteractionEnabled = YES;
+        cell.titletextLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(textPressed:)];
+        [cell.titletextLabel addGestureRecognizer:tap];
+        [cell.titletextLabel addGestureRecognizer:longPress];
+        [cell.detailtextLabel addGestureRecognizer:tap];
+        [cell.detailtextLabel addGestureRecognizer:longPress];
         
         return cell;
     }
