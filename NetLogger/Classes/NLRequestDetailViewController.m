@@ -370,6 +370,16 @@
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.HTTPMethod];;
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_HEADERS];;
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.allHTTPHeaderFields];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_BODY];;
+        if ([self noError])
+        {
+            if (self.request.HTTPBody)
+            {
+                NSString *res = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
+                detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+            }
+            
+        }
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_TIME];;
         double timeInterval = [self.reqId doubleValue];
         NSDate * requestDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
@@ -402,35 +412,36 @@
         {
             detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.httpResponse.allHeaderFields];;
         }
-        
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_BODY];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, RES_BODY];;
         if ([self noError])
         {
-            NSString* res = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
+            NSString *res = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
+            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+            
+        }
+        
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, GEN_DURATION];;
+        if ([self noError])
+        {
+            double timeInterval = [self.reqId doubleValue];
+            NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+            timeInterval = [self.resId doubleValue];
+            NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+            NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
+            NSString* res = [NSString stringWithFormat:@"%f secs", secondsBetween ];
             detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, GEN_DURATION];;
-               if ([self noError])
-               {
-                    double timeInterval = [self.reqId doubleValue];
-                   NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-                   timeInterval = [self.resId doubleValue];
-                   NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-                   NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
-                   NSString* res = [NSString stringWithFormat:@"%f secs", secondsBetween ];
-                   detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-               }
         
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_SIZE];;
         if ([self noError])
         {
-           if (![self.data isKindOfClass:[NSNull class]])
-           {
-               float kilobytes = self.data.length / 1000;
-               NSString* res = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
-               detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-
-           }
+            if (![self.data isKindOfClass:[NSNull class]])
+            {
+                float kilobytes = self.data.length / 1000;
+                NSString* res = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
+                detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+                
+            }
         }
         NSLog(@"These are request Details: \n%@",detail);
     }
