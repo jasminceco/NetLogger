@@ -363,6 +363,107 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
         //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
+        NSString* detail = @"N/A";
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_URL];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.allHTTPHeaderFields];;
+        
+        NSLog(@"this is a Details: %@",detail);
+        
+//        if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_URL]){
+//            detail = self.request.URL.absoluteString;
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_TYPE]){
+//
+//            detail = self.request.HTTPMethod;
+//        }
+//
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_HEADERS]){
+//            detail = [NSString stringWithFormat:@"%@", self.request.allHTTPHeaderFields];;
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_TIME]){
+//
+//            double timeInterval = [self.reqId doubleValue];
+//            NSDate * requestDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+//
+//            NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+//            dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
+//            detail = [dateFormatter stringFromDate:requestDate];
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_STATUS]){
+//            if (self.responseDict)
+//            {
+//                detail = @"Completed";
+//            }
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_CODE]){
+//
+//            if ([self noError])
+//            {
+//                detail = [NSString stringWithFormat:@"%ld",(long)self.httpResponse.statusCode];
+//            }
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_TIME]){
+//            if ([self noError])
+//            {
+//                double timeInterval = [self.resId doubleValue];
+//                NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+//
+//                NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+//                dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
+//                detail = [dateFormatter stringFromDate:resDate];
+//            }
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_HEADERS]){
+//            if ([self noError])
+//            {
+//                detail = [NSString stringWithFormat:@"%@", self.httpResponse.allHeaderFields];;
+//            }
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_BODY]){
+//
+//            if (self.request.HTTPBody)
+//            {
+//                detail = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
+//            }
+//        }
+//
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:GEN_DURATION]){
+//            if ([self noError])
+//            {
+//
+//
+//                double timeInterval = [self.reqId doubleValue];
+//                NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+//
+//                timeInterval = [self.resId doubleValue];
+//                NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+//
+//
+//                NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
+//
+//                detail = [NSString stringWithFormat:@"%f secs", secondsBetween ];
+//
+//
+//            }
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_SIZE]){
+//
+//            detail = @"N/A";
+//
+//        }
+//        else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_SIZE]){
+//            if ([self noError]) {
+//                if (![self.data isKindOfClass:[NSNull class]])
+//                {
+//                    float kilobytes = self.data.length / 1000;
+//                    detail = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
+//                }
+//            }
+//
+//        }
+        
+        
+        
     }
 }
 
