@@ -397,20 +397,20 @@
 
 static NSString *requestDetails(NLRequestDetailViewController *object) {
     NSString* detail = @"";
-    NSString* line = @"**********************************************************";
+    NSString* line = @"-----------------------------------------------------------------------------------";
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@  \n%@", line , line, detail, REQ_URL, line];;
-    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.URL.absoluteString];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, object.request.URL.absoluteString];;
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TYPE, line];;
-    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.HTTPMethod];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, object.request.HTTPMethod];;
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_HEADERS, line];;
-    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.allHTTPHeaderFields];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, object.request.allHTTPHeaderFields];;
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_BODY, line];;
     if ([object noError])
     {
         if (object.request.HTTPBody)
         {
             NSString *res = [[NSString alloc] initWithData:object.request.HTTPBody encoding:NSUTF8StringEncoding];
-            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+            detail = [NSString stringWithFormat:@"\n%@ \n%@ \n", detail, res];;
         }
         
     }
@@ -420,16 +420,16 @@ static NSString *requestDetails(NLRequestDetailViewController *object) {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
     NSString* res = [dateFormatter stringFromDate:requestDate];
-    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, res];;
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_STATUS, line];;
     if (object.responseDict)
     {
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, @"Completed"];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, @"Completed"];;
     }
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_CODE, line];;
     if ([object noError])
     {
-        detail = [NSString stringWithFormat:@"\n%@ \n%ld",detail, (long)object.httpResponse.statusCode];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%ld \n",detail, (long)object.httpResponse.statusCode];;
     }
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_TIME, line];;
     if ([object noError])
@@ -439,18 +439,18 @@ static NSString *requestDetails(NLRequestDetailViewController *object) {
         NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
         NSString* res  = [dateFormatter stringFromDate:resDate];
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, res];;
     }
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_HEADERS, line];;
     if ([object noError])
     {
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.httpResponse.allHeaderFields];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n",detail, object.httpResponse.allHeaderFields];;
     }
     detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_BODY, line];;
     if ([object noError])
     {
         NSString *res = [[NSString alloc] initWithData:object.data encoding:NSUTF8StringEncoding];
-        detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n", detail, res];;
         
     }
     
@@ -463,17 +463,17 @@ static NSString *requestDetails(NLRequestDetailViewController *object) {
         NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
         NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
         NSString* res = [NSString stringWithFormat:@"%f secs", secondsBetween ];
-        detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n", detail, res];;
     }
     
-    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@",detail, REQ_SIZE, line, line];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ ",detail, REQ_SIZE];;
     if ([object noError])
     {
         if (![object.data isKindOfClass:[NSNull class]])
         {
             float kilobytes = object.data.length / 1000;
             NSString* res = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
-            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+            detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@", detail, res, line, line];;
             
         }
     }
