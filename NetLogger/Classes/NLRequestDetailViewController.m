@@ -49,13 +49,13 @@
     [self.detailsArray addObject:REQ_URL];
     [self.detailsArray addObject:REQ_TYPE];
     [self.detailsArray addObject:REQ_HEADERS];
-        [self.detailsArray addObject:REQ_BODY];
+    [self.detailsArray addObject:REQ_BODY];
     [self.detailsArray addObject:REQ_TIME];
     [self.detailsArray addObject:REQ_STATUS];
     [self.detailsArray addObject:RES_CODE];
     [self.detailsArray addObject:RES_TIME];
     [self.detailsArray addObject:RES_HEADERS];
-
+    
     [self.detailsArray addObject:RES_BODY];
     [self.detailsArray addObject:GEN_DURATION];
     [self.detailsArray addObject:REQ_SIZE];
@@ -136,7 +136,7 @@
             });
         }
     }
-
+    
 }
 - (void) resUpdated:(NSNotification *) notification
 {
@@ -154,7 +154,7 @@
                 [self.tableView reloadData];
                 [self.tableView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self.tableView numberOfSections])] withRowAnimation:UITableViewRowAnimationNone];
                 
-
+                
             });
         }
     }
@@ -162,14 +162,14 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 - (IBAction)aboutPressed:(id)sender {
     NSLog(@"aboutPressed");
 }
@@ -190,7 +190,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
- 
+    
     NSString* title = [self.detailsArray objectAtIndex:indexPath.row];
     NSString* detail = @"N/A";
     
@@ -199,7 +199,7 @@
         
         ResponseBodyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
         
-      
+        
         if ([self noError])
         {
             detail = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
@@ -226,7 +226,7 @@
         
         detail = self.request.HTTPMethod;
     }
-
+    
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_HEADERS]){
         detail = [NSString stringWithFormat:@"%@", self.request.allHTTPHeaderFields];;
     }
@@ -266,7 +266,7 @@
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:RES_HEADERS]){
         if ([self noError])
         {
-           detail = [NSString stringWithFormat:@"%@", self.httpResponse.allHeaderFields];;
+            detail = [NSString stringWithFormat:@"%@", self.httpResponse.allHeaderFields];;
         }
     }
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:REQ_BODY]){
@@ -276,11 +276,11 @@
             detail = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
         }
     }
-
+    
     else if ([[self.detailsArray objectAtIndex:indexPath.row] isEqualToString:GEN_DURATION]){
         if ([self noError])
         {
-
+            
             
             double timeInterval = [self.reqId doubleValue];
             NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
@@ -315,14 +315,14 @@
     cell.detailTextLabel.text = detail;
     cell.detailTextLabel.numberOfLines  = 0;
     
-     cell.textLabel.userInteractionEnabled = YES;
-        cell.detailTextLabel.userInteractionEnabled = YES;
+    cell.textLabel.userInteractionEnabled = YES;
+    cell.detailTextLabel.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(textPressed:)];
-        [cell.textLabel addGestureRecognizer:tap];
-        [cell.textLabel addGestureRecognizer:longPress];
-        [cell.detailTextLabel addGestureRecognizer:tap];
-        [cell.detailTextLabel addGestureRecognizer:longPress];
+    [cell.textLabel addGestureRecognizer:tap];
+    [cell.textLabel addGestureRecognizer:longPress];
+    [cell.detailTextLabel addGestureRecognizer:tap];
+    [cell.detailTextLabel addGestureRecognizer:longPress];
     
     return cell;
 }
@@ -333,18 +333,35 @@
         UILabel *someLabel = (UILabel *)gestureRecognizer.view;
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];
-        //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
         
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Info "
+                                                                       message:@"Label text is added to your Pasteboard, feel free to paste it were you choose."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
- 
+
 - (void) textTapped:(UITapGestureRecognizer *) gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
         [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
-        NSLog(@"Test print details  %@", self.detailsArray.description);
         UILabel *someLabel = (UILabel *)gestureRecognizer.view;
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];
+        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Info "
+                                                                       message:@"Label text is added to your Pasteboard, feel free to paste it were you choose."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
         //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
     }
 }
