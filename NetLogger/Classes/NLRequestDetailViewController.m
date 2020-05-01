@@ -172,8 +172,49 @@
  */
 - (IBAction)aboutPressed:(id)sender {
     NSLog(@"aboutPressed");
+    
+    // create a message
+    NSString * theMessage = requestDetails(self);
+     NSArray *items = @[theMessage];
+
+    // build an activity view controller
+     UIActivityViewController *controller = [[UIActivityViewController  alloc]initWithActivityItems:items applicationActivities:nil];
+
+    // and present it
+     [self presentActivityController:controller];
 }
 
+- (void)presentActivityController:(UIActivityViewController *)controller {
+    // for iPad: make the presentation a Popover
+    controller.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:controller animated:YES completion:nil];
+    
+    UIPopoverPresentationController *popController = [controller popoverPresentationController];
+    popController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    popController.barButtonItem = self.navigationItem.leftBarButtonItem;
+    
+    // access the completion handler
+    controller.completionWithItemsHandler = ^(NSString *activityType,
+                                              BOOL completed,
+                                              NSArray *returnedItems,
+                                              NSError *error){
+        // react to the completion
+        if (completed) {
+            
+            // user shared an item
+            NSLog(@"We used activity type%@", activityType);
+            
+        } else {
+            
+            // user cancelled
+            NSLog(@"We didn't want to share anything after all.");
+        }
+        
+        if (error) {
+            NSLog(@"An Error occured: %@, %@", error.localizedDescription, error.localizedFailureReason);
+        }
+    };
+}
 - (IBAction)backPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -354,6 +395,91 @@
     }
 }
 
+static NSString *requestDetails(NLRequestDetailViewController *object) {
+    NSString* detail = @"";
+    NSString* line = @"**********************************************************";
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@  \n%@", line , line, detail, REQ_URL, line];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.URL.absoluteString];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TYPE, line];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.HTTPMethod];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_HEADERS, line];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.request.allHTTPHeaderFields];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_BODY, line];;
+    if ([object noError])
+    {
+        if (object.request.HTTPBody)
+        {
+            NSString *res = [[NSString alloc] initWithData:object.request.HTTPBody encoding:NSUTF8StringEncoding];
+            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+        }
+        
+    }
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TIME, line];;
+    double timeInterval = [object.reqId doubleValue];
+    NSDate * requestDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
+    NSString* res = [dateFormatter stringFromDate:requestDate];
+    detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_STATUS, line];;
+    if (object.responseDict)
+    {
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, @"Completed"];;
+    }
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_CODE, line];;
+    if ([object noError])
+    {
+        detail = [NSString stringWithFormat:@"\n%@ \n%ld",detail, (long)object.httpResponse.statusCode];;
+    }
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_TIME, line];;
+    if ([object noError])
+    {
+        double timeInterval = [object.resId doubleValue];
+        NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
+        NSString* res  = [dateFormatter stringFromDate:resDate];
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
+    }
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_HEADERS, line];;
+    if ([object noError])
+    {
+        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, object.httpResponse.allHeaderFields];;
+    }
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_BODY, line];;
+    if ([object noError])
+    {
+        NSString *res = [[NSString alloc] initWithData:object.data encoding:NSUTF8StringEncoding];
+        detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+        
+    }
+    
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, GEN_DURATION, line];;
+    if ([object noError])
+    {
+        double timeInterval = [object.reqId doubleValue];
+        NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+        timeInterval = [object.resId doubleValue];
+        NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+        NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
+        NSString* res = [NSString stringWithFormat:@"%f secs", secondsBetween ];
+        detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+    }
+    
+    detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@",detail, REQ_SIZE, line, line];;
+    if ([object noError])
+    {
+        if (![object.data isKindOfClass:[NSNull class]])
+        {
+            float kilobytes = object.data.length / 1000;
+            NSString* res = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
+            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
+            
+        }
+    }
+    return detail;
+}
+
 - (void) textTapped:(UITapGestureRecognizer *) gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
         [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
@@ -371,87 +497,7 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
         //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
-        NSString* detail = @"";
-         NSString* line = @"**********************************************************";
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@  \n%@", line , line, detail, REQ_URL, line];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.URL.absoluteString];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TYPE, line];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.HTTPMethod];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_HEADERS, line];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.allHTTPHeaderFields];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_BODY, line];;
-        if ([self noError])
-        {
-            if (self.request.HTTPBody)
-            {
-                NSString *res = [[NSString alloc] initWithData:self.request.HTTPBody encoding:NSUTF8StringEncoding];
-                detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-            }
-            
-        }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TIME, line];;
-        double timeInterval = [self.reqId doubleValue];
-        NSDate * requestDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
-        NSString* res = [dateFormatter stringFromDate:requestDate];
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_STATUS, line];;
-        if (self.responseDict)
-        {
-            detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, @"Completed"];;
-        }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_CODE, line];;
-        if ([self noError])
-        {
-            detail = [NSString stringWithFormat:@"\n%@ \n%ld",detail, (long)self.httpResponse.statusCode];;
-        }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_TIME, line];;
-        if ([self noError])
-        {
-            double timeInterval = [self.resId doubleValue];
-            NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-            NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
-            NSString* res  = [dateFormatter stringFromDate:resDate];
-            detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
-        }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_HEADERS, line];;
-        if ([self noError])
-        {
-            detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.httpResponse.allHeaderFields];;
-        }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_BODY, line];;
-        if ([self noError])
-        {
-            NSString *res = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
-            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-            
-        }
-        
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, GEN_DURATION, line];;
-        if ([self noError])
-        {
-            double timeInterval = [self.reqId doubleValue];
-            NSDate * reqDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-            timeInterval = [self.resId doubleValue];
-            NSDate * resDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-            NSTimeInterval secondsBetween = [resDate timeIntervalSinceDate:reqDate];
-            NSString* res = [NSString stringWithFormat:@"%f secs", secondsBetween ];
-            detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-        }
-        
-        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@",detail, REQ_SIZE, line, line];;
-        if ([self noError])
-        {
-            if (![self.data isKindOfClass:[NSNull class]])
-            {
-                float kilobytes = self.data.length / 1000;
-                NSString* res = [NSString stringWithFormat:@"%.2f Kb",  kilobytes];
-                detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
-                
-            }
-        }
+        NSString * detail = requestDetails(self);
         NSLog(@"These are request Details: \n%@",detail);
     }
 }
