@@ -35,7 +35,6 @@ UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] 
 - (void) textTapped:(UITapGestureRecognizer *) gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
         [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
-        NSLog(@"fjeeddfj");
         UILabel *someLabel = (UILabel *)gestureRecognizer.view;
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];

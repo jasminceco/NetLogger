@@ -67,14 +67,14 @@
 - (void) reqUpdated:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-            self.toolButton.backgroundColor = [UIColor systemRedColor];
+            self.toolButton.backgroundColor = [UIColor systemPinkColor];
 
     });
 }
 - (void) resUpdated:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-            self.toolButton.backgroundColor =[UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1.0];
+        self.toolButton.backgroundColor = [UIColor clearColor];
     });
 }
 

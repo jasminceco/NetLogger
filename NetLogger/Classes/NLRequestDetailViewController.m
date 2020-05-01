@@ -171,17 +171,16 @@
  }
  */
 - (IBAction)aboutPressed:(id)sender {
-    NSLog(@"aboutPressed");
-    
     // create a message
     NSString * theMessage = requestDetails(self);
-     NSArray *items = @[theMessage];
-
+    NSArray *items = @[theMessage];
+    
     // build an activity view controller
-     UIActivityViewController *controller = [[UIActivityViewController  alloc]initWithActivityItems:items applicationActivities:nil];
-
-    // and present it
-     [self presentActivityController:controller];
+    UIActivityViewController *controller = [[UIActivityViewController  alloc]initWithActivityItems:items applicationActivities:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentActivityController:controller];
+    });
 }
 
 - (void)presentActivityController:(UIActivityViewController *)controller {
@@ -383,8 +382,8 @@
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];
         
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Info "
-                                                                       message:@"Label text is added to your Pasteboard, feel free to paste it were you choose."
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Copy "
+                                                                       message:@"The value is copied, feel free to paste it were you choose.."
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -487,8 +486,8 @@ static NSString *requestDetails(NLRequestDetailViewController *object) {
         UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
         [pasteboard setString:someLabel.text];
         
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Info "
-                                                                       message:@"Label text is added to your Pasteboard, feel free to paste it were you choose."
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Copy "
+                                                                       message:@"The value is copied, feel free to paste it were you choose."
                                                                 preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
@@ -496,9 +495,6 @@ static NSString *requestDetails(NLRequestDetailViewController *object) {
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
-        //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
-        NSString * detail = requestDetails(self);
-        NSLog(@"These are request Details: \n%@",detail);
     }
 }
 
