@@ -40,8 +40,8 @@
                                 <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="7A8-MN-jx2"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NetLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-uj-0eF">
-                            <rect key="frame" x="140" y="28" width="95.5" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CT NetLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-uj-0eF">
+                            <rect key="frame" x="124.5" y="28" width="126" height="24"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
