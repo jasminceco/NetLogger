@@ -364,13 +364,14 @@
         [self presentViewController:alert animated:YES completion:nil];
         //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
         NSString* detail = @"";
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_URL];;
+         NSString* line = @"**********************************************************";
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@  \n%@", line , line, detail, REQ_URL, line];;
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.URL.absoluteString];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_TYPE];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TYPE, line];;
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.HTTPMethod];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_HEADERS];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_HEADERS, line];;
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.request.allHTTPHeaderFields];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_BODY];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_BODY, line];;
         if ([self noError])
         {
             if (self.request.HTTPBody)
@@ -380,24 +381,24 @@
             }
             
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_TIME];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_TIME, line];;
         double timeInterval = [self.reqId doubleValue];
         NSDate * requestDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
         NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm:ss";
         NSString* res = [dateFormatter stringFromDate:requestDate];
         detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_STATUS];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, REQ_STATUS, line];;
         if (self.responseDict)
         {
             detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, @"Completed"];;
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, RES_CODE];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_CODE, line];;
         if ([self noError])
         {
             detail = [NSString stringWithFormat:@"\n%@ \n%ld",detail, (long)self.httpResponse.statusCode];;
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, RES_TIME];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_TIME, line];;
         if ([self noError])
         {
             double timeInterval = [self.resId doubleValue];
@@ -407,12 +408,12 @@
             NSString* res  = [dateFormatter stringFromDate:resDate];
             detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, res];;
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, RES_HEADERS];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_HEADERS, line];;
         if ([self noError])
         {
             detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, self.httpResponse.allHeaderFields];;
         }
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, RES_BODY];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, RES_BODY, line];;
         if ([self noError])
         {
             NSString *res = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
@@ -420,7 +421,7 @@
             
         }
         
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, GEN_DURATION];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@",detail, GEN_DURATION, line];;
         if ([self noError])
         {
             double timeInterval = [self.reqId doubleValue];
@@ -432,7 +433,7 @@
             detail = [NSString stringWithFormat:@"\n%@ \n%@", detail, res];;
         }
         
-        detail = [NSString stringWithFormat:@"\n%@ \n%@",detail, REQ_SIZE];;
+        detail = [NSString stringWithFormat:@"\n%@ \n%@ \n%@ \n%@",detail, REQ_SIZE, line, line];;
         if ([self noError])
         {
             if (![self.data isKindOfClass:[NSNull class]])
