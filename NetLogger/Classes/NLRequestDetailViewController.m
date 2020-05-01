@@ -315,7 +315,38 @@
     cell.detailTextLabel.text = detail;
     cell.detailTextLabel.numberOfLines  = 0;
     
+     cell.textLabel.userInteractionEnabled = YES;
+        cell.detailTextLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(textPressed:)];
+        [cell.textLabel addGestureRecognizer:tap];
+        [cell.textLabel addGestureRecognizer:longPress];
+        [cell.detailTextLabel addGestureRecognizer:tap];
+        [cell.detailTextLabel addGestureRecognizer:longPress];
+    
     return cell;
+}
+
+- (void) textPressed:(UILongPressGestureRecognizer *) gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
+        [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
+        UILabel *someLabel = (UILabel *)gestureRecognizer.view;
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        [pasteboard setString:someLabel.text];
+        //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
+        
+    }
+}
+ 
+- (void) textTapped:(UITapGestureRecognizer *) gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateRecognized &&
+        [gestureRecognizer.view isKindOfClass:[UILabel class]]) {
+        NSLog(@"fjeeddfj");
+        UILabel *someLabel = (UILabel *)gestureRecognizer.view;
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        [pasteboard setString:someLabel.text];
+        //let the user know you copied the text to the pasteboard and they can no paste it somewhere else
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
