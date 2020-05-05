@@ -51,11 +51,24 @@
                                 <action selector="aboutPressed:" destination="-1" eventType="touchUpInside" id="PdZ-12-JMH"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAY-fm-86V">
+                            <rect key="frame" x="297" y="25" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="34G-cf-XAD"/>
+                                <constraint firstAttribute="width" constant="30" id="K8n-9I-4qw"/>
+                            </constraints>
+                            <state key="normal" image="trash" catalog="system"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="-1" eventType="touchUpInside" id="U9c-hZ-bhd"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="WZJ-EA-StR" firstAttribute="leading" secondItem="dAY-fm-86V" secondAttribute="trailing" constant="8" id="0FI-h6-OPg"/>
                         <constraint firstItem="Qta-lX-tPp" firstAttribute="leading" secondItem="3xu-ij-QMf" secondAttribute="leading" constant="15" id="67m-Au-afe"/>
                         <constraint firstAttribute="trailing" secondItem="WZJ-EA-StR" secondAttribute="trailing" constant="15" id="6J1-GW-9Wr"/>
+                        <constraint firstItem="dAY-fm-86V" firstAttribute="centerY" secondItem="fqb-uj-0eF" secondAttribute="centerY" id="Qho-kt-nd9"/>
                         <constraint firstItem="oiT-O9-FRS" firstAttribute="leading" secondItem="3xu-ij-QMf" secondAttribute="leading" id="RU5-HT-jfd"/>
                         <constraint firstAttribute="bottom" secondItem="oiT-O9-FRS" secondAttribute="bottom" id="YWA-iE-Ltz"/>
                         <constraint firstItem="Qta-lX-tPp" firstAttribute="centerY" secondItem="3xu-ij-QMf" secondAttribute="centerY" constant="7" id="kRd-zJ-p0m"/>
@@ -80,4 +93,7 @@
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
 </document>

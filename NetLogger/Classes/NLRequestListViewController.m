@@ -75,6 +75,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)deletePressed:(id)sender {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Delete? "
+                                                                   message:@"This will delete all request history? Are you sure?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+        [[[NetRecorder sharedManager] requestDict] removeAllObjects];
+           [self.tableView reloadData];
+    }];
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
+    handler:^(UIAlertAction * action) {}];
+    [alert addAction:defaultAction];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (IBAction)backPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -144,10 +162,10 @@
         
          if (![httpReq isKindOfClass:[NSNull class]] && httpReq.statusCode >= 200 && httpReq.statusCode < 300)
          {
-               accessoryView.backgroundColor = [UIColor greenColor];
+               accessoryView.backgroundColor = [UIColor systemGreenColor];
          }
          else{
-             accessoryView.backgroundColor = [UIColor redColor];
+             accessoryView.backgroundColor = [UIColor systemRedColor];
          }
         
     }
