@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -57,7 +57,7 @@
                                 <constraint firstAttribute="height" constant="30" id="34G-cf-XAD"/>
                                 <constraint firstAttribute="width" constant="30" id="K8n-9I-4qw"/>
                             </constraints>
-                            <state key="normal" image="trash" catalog="system"/>
+                            <state key="normal" image="network"/>
                             <connections>
                                 <action selector="deletePressed:" destination="-1" eventType="touchUpInside" id="U9c-hZ-bhd"/>
                             </connections>
@@ -94,6 +94,6 @@
         </view>
     </objects>
     <resources>
-        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="network" width="60" height="60"/>
     </resources>
 </document>
