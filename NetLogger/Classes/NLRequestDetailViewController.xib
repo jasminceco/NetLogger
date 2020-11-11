@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,8 +47,12 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZJ-EA-StR">
-                            <rect key="frame" x="341" y="29" width="19" height="22"/>
-                            <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                            <rect key="frame" x="330" y="25" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="5FD-Jv-LTu"/>
+                                <constraint firstAttribute="width" constant="30" id="6VQ-gb-O52"/>
+                            </constraints>
+                            <state key="normal" image="network"/>
                             <connections>
                                 <action selector="aboutPressed:" destination="-1" eventType="touchUpInside" id="G8h-tY-NIv"/>
                             </connections>
@@ -83,6 +87,6 @@
         </view>
     </objects>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="network" width="60" height="60"/>
     </resources>
 </document>
