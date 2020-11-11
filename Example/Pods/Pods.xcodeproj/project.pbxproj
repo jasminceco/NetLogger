@@ -7,366 +7,438 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02FF31168D8ADEFDB46D39A3345F9A10 /* NLRequestDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 649DDA02A5E9E41F0B4716405382DEC5 /* NLRequestDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		235E895708FD8904CAA962548585EE1B /* NLRequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E670AB418EE4E39C27DC6FB984B8196 /* NLRequestDetailViewController.m */; };
-		352C365C05B57F9DD1DD8930E3115949 /* NLWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8647A31664877C60112DFBD9B629A389 /* NLWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39D3E45ECE6727E756AAF5BFFA6DBAD5 /* NLBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03551307F5FC10230C790FD5D0CCCC02 /* NLBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		483E90B0B7DEC970EE6CC6D8D6BCE85F /* NetLogger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3250ED4207ED5634D7E9CC086A5889ED /* NetLogger.bundle */; };
-		49B8F1B0D5ADDB07A321BDA516AEC7B0 /* NLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94CEB82D3C2236E27D66A84D3C748B /* NLWindow.m */; };
-		4C607D1B01E908F706307CA0E4E9784A /* NetRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9ABFBAC33C8DDF33431D925594DC7 /* NetRecorder.m */; };
-		4F3F77DE7F55AFBBDE5772E98DB83369 /* NLConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B1B15B03C0D9CBBBD01BBDAA0F6D427 /* NLConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56E0616A1EA1BA6587FDDBADE7A0CDBE /* NetLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F5D302399DC7A76EF6969AC852A696A /* NetLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E214AD01B4AF47E3740D4A6A7D5A001 /* NSURLSession+Observer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB4CF2F536211A454DC50B8ED4B4169 /* NSURLSession+Observer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F40FED530ACF5DA8DE95EA7C960D899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		6754464DB31CE4F3E4C0B4C3F10EF374 /* Pods-NetLogger_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3EDEFC6AE4693D825D7DC43558991E /* Pods-NetLogger_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		793E2E279B58E059D748B33CAF3FE1E2 /* NLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB979CD4179661FBD9EB910203F2D938 /* NLBaseViewController.m */; };
-		812E6A524CA6605B07C017DF5E4AC96D /* NSURLSession+Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 535C76EB13510A21B68F09352ABAA133 /* NSURLSession+Observer.m */; };
-		857AD7557FFC6CA4B92A451D0122126C /* ResponseBodyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F27D66E767D05497FC1527096ECF0F /* ResponseBodyTableViewCell.m */; };
-		864C02F05EADD93A48E1761B02EA236B /* ResponseBodyTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB76F1FB5F9BE925AE32123827ED89D /* ResponseBodyTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8819B3CF80C8CD5B67F5D76A32B313C0 /* Pods-NetLogger_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19975468565D7D76C802FC72897C7B75 /* Pods-NetLogger_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A423B57C89BEB858E36A12103DC4A2DC /* NetLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC1857055E501909D619F5E5FE9F9C0 /* NetLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A536057BF8295D24687B088F76E7F3B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		AAE18088B4AC36C8CD657A0C5BA8F3E4 /* Pods-NetLogger_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E2E4C89DBCAF348D8B1FC60DE06B2C /* Pods-NetLogger_Example-dummy.m */; };
-		B3D4C14A9A0103993CEE7ABBBC28B8C7 /* NLOverlayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A354509242DD0B1BFAD301CFA5BF8B19 /* NLOverlayViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC31C39EED357173B0283AF86CAF10D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C3150E412D89EC6DD0B745899E643A /* Images.xcassets */; };
-		C337842CD3A0387AA5B654D5D77CA4C2 /* ResponseBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22722933C0EC5B020B7110098A5D05FE /* ResponseBodyTableViewCell.xib */; };
-		C3677912F6B0E527CE7423D0BF8EE414 /* NLRequestDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E74D776BA9BE98F37660A19E8E9721 /* NLRequestDetailViewController.xib */; };
-		CC0556FAD7927BF89354B2F554EED4B6 /* NetLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 076F65134152E79EA27EF3BE9F7941DF /* NetLogger.m */; };
-		CDA752D6F1A9DFC56000ABCB9531CFBB /* NLRequestListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B2B85C4F99D67F074C23623C4E21EDB2 /* NLRequestListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4CC642954EDCEAA118E633BFFCF9D90 /* Pods-NetLogger_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E08FE1771C5E472CB7DF5D4B45DD103F /* Pods-NetLogger_Tests-dummy.m */; };
-		DBE27D4FE020F419567291811A2E4EC7 /* NLOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271946059522CC67CE5F3E907C13BF59 /* NLOverlayViewController.xib */; };
-		DD5F9339B7592AB66328EC0CD233730A /* NLRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5226DD93E229D2F9EDD7F38B0B07F978 /* NLRequestsViewController.xib */; };
-		DF9748099FADB06AEB870321C8A8E858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DFD956E772A5CCACE506DDC54587FE74 /* NetLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3786276E98708EBC02C1F7C1C0BF8FB6 /* NetLogger-dummy.m */; };
-		E59563D63B1F6FA31522F0CC9AF36C72 /* NLRequestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE6683904B35E9ACF9F5D5B0570BDF /* NLRequestListViewController.m */; };
-		FA6B41C1745A60EF1E522BC1281A8F27 /* NetRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7D4DFD5EA33F073E0BA59CBECC61E5 /* NetRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB7AEFAB50B9AEAC074CE4C774D14EE4 /* NLOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB18628491B6E649189E288858CB17D /* NLOverlayViewController.m */; };
+		06C741A846BEB9E04B8BAD15557A76C5 /* ResponseBodyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF3E1C2C7D1B263538D8AF09D506D6 /* ResponseBodyTableViewCell.m */; };
+		0E16C6523620AFD8E92CD30C5FF2EEFA /* NLBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 33EA4EAB86777688965E4DA39465E084 /* NLBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D1186AEFAFB749F7FC7255DC2566077 /* Pods-NetLogger_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C5BF3E400276540B553F2536FFFD4C /* Pods-NetLogger_Tests-dummy.m */; };
+		2018D5BDAEFC4308E3DDC82293E9CC4B /* NSURLSession+Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 915BB4F5966110D3330E157846FC5EDE /* NSURLSession+Observer.m */; };
+		2C218DD7C1DBFCBF38BE98FA31915AE9 /* NetLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DD7185C4C53439152B1461FCDEC1F0D /* NetLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D7AD4642BBFC9EE15B4406E09E8D391 /* NLRequestDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E50147E25EB0CBEEECCE444D5D8019C /* NLRequestDetailViewController.xib */; };
+		2EF05EAC9EDA30A7D2402CE6D8CCB193 /* NSURLSession+Observer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D93DD31504EEBE4C918492553E35149 /* NSURLSession+Observer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B9A0335CA888A24EA4B2A40220761B2 /* Pods-NetLogger_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B486C3CDA4A55DF68E7FD1184C400E /* Pods-NetLogger_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C5CB84203EE4B60360358EB55BC9443 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79F84009686E2E9FB041C419D67FF02 /* Images.xcassets */; };
+		3E6D7A1719570C3FBE68CCBA6C31520F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4209DCD8E65373DEDC35F5D957CBA18B /* NLOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDF17FB191F36B35F313B709920F52 /* NLOverlayViewController.m */; };
+		4222291C74C0430F27B0893E6A5556F4 /* ResponseBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF9858EF95F3BB0F1CCBA6A53D2CC73 /* ResponseBodyTableViewCell.xib */; };
+		4A73FA594A6B52C2DF75B2E011D32CFC /* NLOverlayViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE8C39600072961704811D3227E8C0B /* NLOverlayViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55258E8C33568C0A4E5D1BD318013E35 /* NetLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7AC22C9EA994FDB53F837B13989BAB /* NetLogger.m */; };
+		621A998BA56F2BE0B88C61AAAE9137CD /* NLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B3B1FC10B1F9534087E3EC924B804 /* NLBaseViewController.m */; };
+		6531FCA3903F6A94A6FAC846067B2163 /* Pods-NetLogger_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE088FD75D3E292F29D1670C37BA4C9F /* Pods-NetLogger_Example-dummy.m */; };
+		6976002EFFA6F9D530CB2409907F7F6E /* NLWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E27BC4C154ADA5809619155F4001FDAF /* NLWindow.m */; };
+		7296B280CD41AE078143239A64C95EC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		87F714D4552D06B02D060DFAC84BCE2E /* NLOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6402E47D9C8C8D5F4109BCBC737D3367 /* NLOverlayViewController.xib */; };
+		8F58F6D05DB96663D592BEA328F4D96C /* NetRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = BA67F42720AA2C2A1E0BA7E6E519D1B2 /* NetRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FED38B013990762266C4ADD5A3249DE /* NLWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A6C7A254B516552F00B06CD9DE1133 /* NLWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		957C328617D4F4F2222F51CBFCD00EAF /* ResponseBodyTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E1D3F38940A59B572010AF46A4DF8E /* ResponseBodyTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA8ACA4E69EACCAB9F8B4F6E91079EB /* NLRequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F6D981A6745F9228BBD1DAF25DB91 /* NLRequestDetailViewController.m */; };
+		9C0725EF171E0AA4EABA9616AEA04C0A /* NLRequestListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAC522E60BB7DD5DD046E1FC44A7AA /* NLRequestListViewController.m */; };
+		AACE0969C6D3968F805C7CD7A6D87697 /* Pods-NetLogger_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB25F550898CC2251256267AC4DADA9 /* Pods-NetLogger_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD602BC419F7F57F2B014F3D20F2C712 /* NLRequestDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A373419134B39AB695E5DD67462998E1 /* NLRequestDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2B66101C4BB9857EA03DBBB55AF58C3 /* NetRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 31283FAEEDFB0221E0C2DDC47255D425 /* NetRecorder.m */; };
+		BA3C19AD14BF32CD17B849187C2348B2 /* NLConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2D55E89C4F95CB313229AC6543866E /* NLConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1DA03FF1E1B7EC664744B4F5465C559 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D8DAF12509BA0D128365039A05FBFD84 /* NetLogger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BAB085F42F1A2BBD4083EF3D132CBE5E /* NetLogger.bundle */; };
+		DB060FC380835694935DF10F4A1A795F /* NetLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566D794F5E85F5AF2964FBC5AE754CF /* NetLogger-dummy.m */; };
+		DD7A1FA53456C5470C38B6FAA156F5EF /* NLRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F1B509ED0786E0AD9B0CC687C8A507F /* NLRequestsViewController.xib */; };
+		E8784B0AB119EEF698263100B8C70CF0 /* NetLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A1DFB96F2414C9B1D84880DF15F63ADE /* NetLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5EA9D74E82AC9067DA291BE1C6E0888 /* NLRequestListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 23BB73FD4FE6F4F0EAC552DC9DFE3E3B /* NLRequestListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		621B872E77933D89EB362D08784B9529 /* PBXContainerItemProxy */ = {
+		096E4B02E6F72E7668417B1C128BAC6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9783BB8E815B53168E932ACBFC5B9ABD;
-			remoteInfo = NetLogger;
+			remoteGlobalIDString = 309C69ED4CDF4EFA6FF19573FEDF3BF9;
+			remoteInfo = "Pods-NetLogger_Example";
 		};
-		AFD595B3FEA27D27A81FA4652F0AD4CB /* PBXContainerItemProxy */ = {
+		8B4AF25FDF926521A7482EE4D362BC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 260D7EA0FAD34116A839B47E71FF0AF6;
+			remoteGlobalIDString = BF141DBF943F76D5CCFBC050939C7D5A;
 			remoteInfo = "NetLogger-NetLogger";
+		};
+		F595FA85C7ED5EF36BC901957CA551AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 357944341B55CE97EA3A7E19F6BDEA62;
+			remoteInfo = NetLogger;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		004BF5E9549B30D1521057FD8F2F7E8F /* Pods-NetLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		03551307F5FC10230C790FD5D0CCCC02 /* NLBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLBaseViewController.h; path = NetLogger/Classes/NLBaseViewController.h; sourceTree = "<group>"; };
-		076F65134152E79EA27EF3BE9F7941DF /* NetLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NetLogger.m; path = NetLogger/Classes/NetLogger.m; sourceTree = "<group>"; };
-		0DB18628491B6E649189E288858CB17D /* NLOverlayViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLOverlayViewController.m; path = NetLogger/Classes/NLOverlayViewController.m; sourceTree = "<group>"; };
-		0FE6DE71BD824A05FFCE9BF79B115F77 /* Pods-NetLogger_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetLogger_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		14D389D454B7A1052E0FB51D08EFB29E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15C3150E412D89EC6DD0B745899E643A /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		19975468565D7D76C802FC72897C7B75 /* Pods-NetLogger_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetLogger_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1EB4CF2F536211A454DC50B8ED4B4169 /* NSURLSession+Observer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+Observer.h"; path = "NetLogger/Classes/NSURLSession+Observer.h"; sourceTree = "<group>"; };
-		1EC1857055E501909D619F5E5FE9F9C0 /* NetLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetLogger.h; path = NetLogger/Classes/NetLogger.h; sourceTree = "<group>"; };
-		22722933C0EC5B020B7110098A5D05FE /* ResponseBodyTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ResponseBodyTableViewCell.xib; sourceTree = "<group>"; };
-		252795B6D2280FE7A78D536873FFB88E /* Pods-NetLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		271946059522CC67CE5F3E907C13BF59 /* NLOverlayViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLOverlayViewController.xib; sourceTree = "<group>"; };
-		27C37247B4A532E16E06E353F2244984 /* Pods-NetLogger_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2E670AB418EE4E39C27DC6FB984B8196 /* NLRequestDetailViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLRequestDetailViewController.m; path = NetLogger/Classes/NLRequestDetailViewController.m; sourceTree = "<group>"; };
-		2F5D302399DC7A76EF6969AC852A696A /* NetLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetLogger-umbrella.h"; sourceTree = "<group>"; };
-		3250ED4207ED5634D7E9CC086A5889ED /* NetLogger.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NetLogger.bundle; path = NetLogger.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		35A1553DAAE0C7DAF86F7B1C8CC2E11A /* Pods_NetLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetLogger_Tests.framework; path = "Pods-NetLogger_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3786276E98708EBC02C1F7C1C0BF8FB6 /* NetLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NetLogger-dummy.m"; sourceTree = "<group>"; };
-		3B1B15B03C0D9CBBBD01BBDAA0F6D427 /* NLConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLConstants.h; path = NetLogger/Classes/NLConstants.h; sourceTree = "<group>"; };
-		40F27D66E767D05497FC1527096ECF0F /* ResponseBodyTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ResponseBodyTableViewCell.m; path = NetLogger/Classes/ResponseBodyTableViewCell.m; sourceTree = "<group>"; };
-		46066C2FB551446BC4A92A25C5DAFC3A /* Pods-NetLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		49427F48146B67076A06314C3104B70D /* Pods-NetLogger_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NetLogger_Tests.modulemap"; sourceTree = "<group>"; };
-		4F94CEB82D3C2236E27D66A84D3C748B /* NLWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLWindow.m; path = NetLogger/Classes/NLWindow.m; sourceTree = "<group>"; };
-		5226DD93E229D2F9EDD7F38B0B07F978 /* NLRequestsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLRequestsViewController.xib; sourceTree = "<group>"; };
-		5331B58197E4FF8E9080DA1F0440FA0C /* Pods-NetLogger_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetLogger_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		535C76EB13510A21B68F09352ABAA133 /* NSURLSession+Observer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+Observer.m"; path = "NetLogger/Classes/NSURLSession+Observer.m"; sourceTree = "<group>"; };
-		55A295425A44A96D93F25537BB8AFF46 /* Pods-NetLogger_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetLogger_Example-resources.sh"; sourceTree = "<group>"; };
-		5F3D9175A110E3FE7A8659872D952E58 /* Pods-NetLogger_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NetLogger_Example.modulemap"; sourceTree = "<group>"; };
-		649DDA02A5E9E41F0B4716405382DEC5 /* NLRequestDetailViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLRequestDetailViewController.h; path = NetLogger/Classes/NLRequestDetailViewController.h; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		679C55641B53828A7679B1A399CBAE55 /* Pods-NetLogger_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetLogger_Tests-resources.sh"; sourceTree = "<group>"; };
-		6E3EDEFC6AE4693D825D7DC43558991E /* Pods-NetLogger_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetLogger_Example-umbrella.h"; sourceTree = "<group>"; };
-		6FED59B9B072711EBECE44C61EA6CE35 /* NetLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NetLogger.modulemap; sourceTree = "<group>"; };
-		77E2E4C89DBCAF348D8B1FC60DE06B2C /* Pods-NetLogger_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetLogger_Example-dummy.m"; sourceTree = "<group>"; };
-		7911443CF8EFD2854ABB1790E64A9320 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DB76F1FB5F9BE925AE32123827ED89D /* ResponseBodyTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ResponseBodyTableViewCell.h; path = NetLogger/Classes/ResponseBodyTableViewCell.h; sourceTree = "<group>"; };
-		8647A31664877C60112DFBD9B629A389 /* NLWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLWindow.h; path = NetLogger/Classes/NLWindow.h; sourceTree = "<group>"; };
-		8C7D4DFD5EA33F073E0BA59CBECC61E5 /* NetRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetRecorder.h; path = NetLogger/Classes/NetRecorder.h; sourceTree = "<group>"; };
-		907B6DC24E40B948249346BF3A383C99 /* NetLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetLogger-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9714D682AC8985C3D220846844A5B8BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EB9ABFBAC33C8DDF33431D925594DC7 /* NetRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NetRecorder.m; path = NetLogger/Classes/NetRecorder.m; sourceTree = "<group>"; };
-		A0BE6683904B35E9ACF9F5D5B0570BDF /* NLRequestListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLRequestListViewController.m; path = NetLogger/Classes/NLRequestListViewController.m; sourceTree = "<group>"; };
-		A354509242DD0B1BFAD301CFA5BF8B19 /* NLOverlayViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLOverlayViewController.h; path = NetLogger/Classes/NLOverlayViewController.h; sourceTree = "<group>"; };
-		A8362A33443BB3CDC7F02673A4C615BB /* Pods-NetLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B2B85C4F99D67F074C23623C4E21EDB2 /* NLRequestListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLRequestListViewController.h; path = NetLogger/Classes/NLRequestListViewController.h; sourceTree = "<group>"; };
-		B4ECF8A2D8083D051CF1F737F57D1D8F /* Pods-NetLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
-		CB979CD4179661FBD9EB910203F2D938 /* NLBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLBaseViewController.m; path = NetLogger/Classes/NLBaseViewController.m; sourceTree = "<group>"; };
-		D27E02FC64F049970B85F20043F9FD7B /* Pods_NetLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetLogger_Example.framework; path = "Pods-NetLogger_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3E210017A5A8A9608F34F8118A70496 /* ResourceBundle-NetLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-NetLogger-Info.plist"; sourceTree = "<group>"; };
-		DC24ED094EE0F8F4A72CFB994D1FCE85 /* NetLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NetLogger.framework; path = NetLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD8BCFDA93C39EFFBEBB7A4D3EC4021F /* Pods-NetLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E08FE1771C5E472CB7DF5D4B45DD103F /* Pods-NetLogger_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetLogger_Tests-dummy.m"; sourceTree = "<group>"; };
-		F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NetLogger.xcconfig; sourceTree = "<group>"; };
-		F4E74D776BA9BE98F37660A19E8E9721 /* NLRequestDetailViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLRequestDetailViewController.xib; sourceTree = "<group>"; };
-		FB83AA90576D63370C61623D30A9905E /* Pods-NetLogger_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetLogger_Example-frameworks.sh"; sourceTree = "<group>"; };
+		01D593C36397118D6F03D360F8C9AE97 /* Pods-NetLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		18A6C7A254B516552F00B06CD9DE1133 /* NLWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLWindow.h; path = NetLogger/Classes/NLWindow.h; sourceTree = "<group>"; };
+		23BB73FD4FE6F4F0EAC552DC9DFE3E3B /* NLRequestListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLRequestListViewController.h; path = NetLogger/Classes/NLRequestListViewController.h; sourceTree = "<group>"; };
+		27F070C94A37BDE7E82C4B157BC5069E /* Pods-NetLogger_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetLogger_Tests.modulemap"; sourceTree = "<group>"; };
+		29DF3E1C2C7D1B263538D8AF09D506D6 /* ResponseBodyTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ResponseBodyTableViewCell.m; path = NetLogger/Classes/ResponseBodyTableViewCell.m; sourceTree = "<group>"; };
+		2A84CC2C5FD44E195F00A1680488C712 /* Pods-NetLogger_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetLogger_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31283FAEEDFB0221E0C2DDC47255D425 /* NetRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NetRecorder.m; path = NetLogger/Classes/NetRecorder.m; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33EA4EAB86777688965E4DA39465E084 /* NLBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLBaseViewController.h; path = NetLogger/Classes/NLBaseViewController.h; sourceTree = "<group>"; };
+		3F2D55E89C4F95CB313229AC6543866E /* NLConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLConstants.h; path = NetLogger/Classes/NLConstants.h; sourceTree = "<group>"; };
+		3FA84829669114F4EB7E0F4B2DE25154 /* Pods_NetLogger_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetLogger_Tests.framework; path = "Pods-NetLogger_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		483B41BBC310E98A64CEB6384CBE10A3 /* Pods-NetLogger_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NetLogger_Example.modulemap"; sourceTree = "<group>"; };
+		4D6A136AD42B84EA127E70D4065E662E /* NetLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NetLogger.modulemap; sourceTree = "<group>"; };
+		4D8503A7E221DF2017A1E3CB27B51BF0 /* Pods-NetLogger_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Tests-Info.plist"; sourceTree = "<group>"; };
+		54E1D3F38940A59B572010AF46A4DF8E /* ResponseBodyTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ResponseBodyTableViewCell.h; path = NetLogger/Classes/ResponseBodyTableViewCell.h; sourceTree = "<group>"; };
+		5DD7185C4C53439152B1461FCDEC1F0D /* NetLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetLogger-umbrella.h"; sourceTree = "<group>"; };
+		5FB25F550898CC2251256267AC4DADA9 /* Pods-NetLogger_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetLogger_Tests-umbrella.h"; sourceTree = "<group>"; };
+		63C5BF3E400276540B553F2536FFFD4C /* Pods-NetLogger_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetLogger_Tests-dummy.m"; sourceTree = "<group>"; };
+		6402E47D9C8C8D5F4109BCBC737D3367 /* NLOverlayViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLOverlayViewController.xib; sourceTree = "<group>"; };
+		66736291B7BFD8B71A73EDACAD597233 /* Pods-NetLogger_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B9F6D981A6745F9228BBD1DAF25DB91 /* NLRequestDetailViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLRequestDetailViewController.m; path = NetLogger/Classes/NLRequestDetailViewController.m; sourceTree = "<group>"; };
+		6E50147E25EB0CBEEECCE444D5D8019C /* NLRequestDetailViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLRequestDetailViewController.xib; sourceTree = "<group>"; };
+		771106E1A7EE1CD81D02B30A5D68C90F /* Pods-NetLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7BD45B1B5D227FF779FC5664ADE90F42 /* NetLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = NetLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7F1B509ED0786E0AD9B0CC687C8A507F /* NLRequestsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NLRequestsViewController.xib; sourceTree = "<group>"; };
+		83960C298EC525920D67F10BD00FAC7D /* Pods-NetLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NetLogger.xcconfig; sourceTree = "<group>"; };
+		8C2B3B1FC10B1F9534087E3EC924B804 /* NLBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLBaseViewController.m; path = NetLogger/Classes/NLBaseViewController.m; sourceTree = "<group>"; };
+		8D93DD31504EEBE4C918492553E35149 /* NSURLSession+Observer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+Observer.h"; path = "NetLogger/Classes/NSURLSession+Observer.h"; sourceTree = "<group>"; };
+		915BB4F5966110D3330E157846FC5EDE /* NSURLSession+Observer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+Observer.m"; path = "NetLogger/Classes/NSURLSession+Observer.m"; sourceTree = "<group>"; };
+		92630EAA05212C6791C91DC0B9AAF0E4 /* NetLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NetLogger-Info.plist"; sourceTree = "<group>"; };
+		9566D794F5E85F5AF2964FBC5AE754CF /* NetLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NetLogger-dummy.m"; sourceTree = "<group>"; };
+		9AE8C39600072961704811D3227E8C0B /* NLOverlayViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLOverlayViewController.h; path = NetLogger/Classes/NLOverlayViewController.h; sourceTree = "<group>"; };
+		9C74E2DB3E77F7FFF00C390F26E2C645 /* ResourceBundle-NetLogger-NetLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-NetLogger-NetLogger-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0B486C3CDA4A55DF68E7FD1184C400E /* Pods-NetLogger_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NetLogger_Example-umbrella.h"; sourceTree = "<group>"; };
+		A1DFB96F2414C9B1D84880DF15F63ADE /* NetLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetLogger.h; path = NetLogger/Classes/NetLogger.h; sourceTree = "<group>"; };
+		A373419134B39AB695E5DD67462998E1 /* NLRequestDetailViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NLRequestDetailViewController.h; path = NetLogger/Classes/NLRequestDetailViewController.h; sourceTree = "<group>"; };
+		B094A3D59DA97AA9A18FE6F37DFC8A19 /* Pods-NetLogger_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Example-Info.plist"; sourceTree = "<group>"; };
+		BA67F42720AA2C2A1E0BA7E6E519D1B2 /* NetRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NetRecorder.h; path = NetLogger/Classes/NetRecorder.h; sourceTree = "<group>"; };
+		BAB085F42F1A2BBD4083EF3D132CBE5E /* NetLogger.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NetLogger.bundle; path = "NetLogger-NetLogger.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAF45FAC62CF6D700010BF5E2388D0F /* Pods-NetLogger_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetLogger_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CCD4C981A10DC588A2CC04CFAC8EB620 /* Pods-NetLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CDAB70D51A686D0185CF8B714751F71D /* NetLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NetLogger-prefix.pch"; sourceTree = "<group>"; };
+		D4BAC522E60BB7DD5DD046E1FC44A7AA /* NLRequestListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLRequestListViewController.m; path = NetLogger/Classes/NLRequestListViewController.m; sourceTree = "<group>"; };
+		D7D94B222E73C79D90E63258D733D406 /* Pods_NetLogger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NetLogger_Example.framework; path = "Pods-NetLogger_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3C62AB351FB3050E9553F1FAA54B96 /* Pods-NetLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DAF8A571DC322E3B03525FA25700B2B4 /* Pods-NetLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DAF9858EF95F3BB0F1CCBA6A53D2CC73 /* ResponseBodyTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ResponseBodyTableViewCell.xib; sourceTree = "<group>"; };
+		DE489E51B20914DE4B58650DD1FC7027 /* NetLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NetLogger.framework; path = NetLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7AC22C9EA994FDB53F837B13989BAB /* NetLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NetLogger.m; path = NetLogger/Classes/NetLogger.m; sourceTree = "<group>"; };
+		E27BC4C154ADA5809619155F4001FDAF /* NLWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLWindow.m; path = NetLogger/Classes/NLWindow.m; sourceTree = "<group>"; };
+		E79F84009686E2E9FB041C419D67FF02 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBBDE2C43AF41E19EE3ACD4CCE1C0A86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F5FDF17FB191F36B35F313B709920F52 /* NLOverlayViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NLOverlayViewController.m; path = NetLogger/Classes/NLOverlayViewController.m; sourceTree = "<group>"; };
+		F66328BBD5D2BED5B8F2B8F182C0CF81 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		FE088FD75D3E292F29D1670C37BA4C9F /* Pods-NetLogger_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetLogger_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D713518C6FE1716A455AA6419CF171D /* Frameworks */ = {
+		00BF2CFD76788E1E3F60C61283CC2CA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DA03FF1E1B7EC664744B4F5465C559 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF29AC1D6BF21979CFDE7370D043912 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B684A8205755121B49324C2A41038DE /* Frameworks */ = {
+		77487F9EE39D95CFF2C12D25B96425FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A536057BF8295D24687B088F76E7F3B8 /* Foundation.framework in Frameworks */,
+				3E6D7A1719570C3FBE68CCBA6C31520F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5DCBB0D269D8669B24F3CABFE91EC8D /* Frameworks */ = {
+		A4F02D7510B404C186D53041C1F807C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F40FED530ACF5DA8DE95EA7C960D899 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F76E5ECDABEDF3294EC6007FD04C0109 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF9748099FADB06AEB870321C8A8E858 /* Foundation.framework in Frameworks */,
+				7296B280CD41AE078143239A64C95EC8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3519E33603EAF396DCC5DE0CDD2FBD58 /* Resources */ = {
+		0B239963C8591C4F926A5437348AF48D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1D1CD29F103069618EE02581E6FB309 /* Assets */,
-				5A42C1C73B2353F2F0D96797F1D5F3F5 /* Classes */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		3956518560DACA286689E5D4F1289575 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3250ED4207ED5634D7E9CC086A5889ED /* NetLogger.bundle */,
-				DC24ED094EE0F8F4A72CFB994D1FCE85 /* NetLogger.framework */,
-				D27E02FC64F049970B85F20043F9FD7B /* Pods_NetLogger_Example.framework */,
-				35A1553DAAE0C7DAF86F7B1C8CC2E11A /* Pods_NetLogger_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		41F6C06572AC78DA7F6965E639985C4D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AFB2A2E68F61D18255529063897EB693 /* Pods-NetLogger_Example */,
-				DDCE4E7FCAC8D1D313C81AB84AE52CFE /* Pods-NetLogger_Tests */,
+				745C03677E1596EE135E736908383EC8 /* Pods-NetLogger_Example */,
+				4775A0D53E93D507348D3B4BEE0C045F /* Pods-NetLogger_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5A42C1C73B2353F2F0D96797F1D5F3F5 /* Classes */ = {
+		354EB0CD6E83AFF269C33E6EAA5A6FEB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				271946059522CC67CE5F3E907C13BF59 /* NLOverlayViewController.xib */,
-				F4E74D776BA9BE98F37660A19E8E9721 /* NLRequestDetailViewController.xib */,
-				5226DD93E229D2F9EDD7F38B0B07F978 /* NLRequestsViewController.xib */,
-				22722933C0EC5B020B7110098A5D05FE /* ResponseBodyTableViewCell.xib */,
+				6402E47D9C8C8D5F4109BCBC737D3367 /* NLOverlayViewController.xib */,
+				6E50147E25EB0CBEEECCE444D5D8019C /* NLRequestDetailViewController.xib */,
+				7F1B509ED0786E0AD9B0CC687C8A507F /* NLRequestsViewController.xib */,
+				DAF9858EF95F3BB0F1CCBA6A53D2CC73 /* ResponseBodyTableViewCell.xib */,
 			);
 			name = Classes;
 			path = NetLogger/Classes;
 			sourceTree = "<group>";
 		};
-		5E77303926991BA963AC34CB77FB4FE9 /* NetLogger */ = {
+		3923FE9BAF4FCC28E9E58D0044190963 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1EC1857055E501909D619F5E5FE9F9C0 /* NetLogger.h */,
-				076F65134152E79EA27EF3BE9F7941DF /* NetLogger.m */,
-				8C7D4DFD5EA33F073E0BA59CBECC61E5 /* NetRecorder.h */,
-				9EB9ABFBAC33C8DDF33431D925594DC7 /* NetRecorder.m */,
-				03551307F5FC10230C790FD5D0CCCC02 /* NLBaseViewController.h */,
-				CB979CD4179661FBD9EB910203F2D938 /* NLBaseViewController.m */,
-				3B1B15B03C0D9CBBBD01BBDAA0F6D427 /* NLConstants.h */,
-				A354509242DD0B1BFAD301CFA5BF8B19 /* NLOverlayViewController.h */,
-				0DB18628491B6E649189E288858CB17D /* NLOverlayViewController.m */,
-				649DDA02A5E9E41F0B4716405382DEC5 /* NLRequestDetailViewController.h */,
-				2E670AB418EE4E39C27DC6FB984B8196 /* NLRequestDetailViewController.m */,
-				B2B85C4F99D67F074C23623C4E21EDB2 /* NLRequestListViewController.h */,
-				A0BE6683904B35E9ACF9F5D5B0570BDF /* NLRequestListViewController.m */,
-				8647A31664877C60112DFBD9B629A389 /* NLWindow.h */,
-				4F94CEB82D3C2236E27D66A84D3C748B /* NLWindow.m */,
-				1EB4CF2F536211A454DC50B8ED4B4169 /* NSURLSession+Observer.h */,
-				535C76EB13510A21B68F09352ABAA133 /* NSURLSession+Observer.m */,
-				7DB76F1FB5F9BE925AE32123827ED89D /* ResponseBodyTableViewCell.h */,
-				40F27D66E767D05497FC1527096ECF0F /* ResponseBodyTableViewCell.m */,
-				3519E33603EAF396DCC5DE0CDD2FBD58 /* Resources */,
-				A6D94FC381704027DBC0726F775045DC /* Support Files */,
+				A8285FA3CC61DC88FE1EF4780F548D74 /* Assets */,
+				354EB0CD6E83AFF269C33E6EAA5A6FEB /* Classes */,
 			);
-			name = NetLogger;
-			path = ../..;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		77A5F4FEF481EF5B4A6153A82B4DF891 /* Development Pods */ = {
+		4775A0D53E93D507348D3B4BEE0C045F /* Pods-NetLogger_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5E77303926991BA963AC34CB77FB4FE9 /* NetLogger */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				77A5F4FEF481EF5B4A6153A82B4DF891 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3956518560DACA286689E5D4F1289575 /* Products */,
-				41F6C06572AC78DA7F6965E639985C4D /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		A6D94FC381704027DBC0726F775045DC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9714D682AC8985C3D220846844A5B8BC /* Info.plist */,
-				6FED59B9B072711EBECE44C61EA6CE35 /* NetLogger.modulemap */,
-				F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */,
-				3786276E98708EBC02C1F7C1C0BF8FB6 /* NetLogger-dummy.m */,
-				907B6DC24E40B948249346BF3A383C99 /* NetLogger-prefix.pch */,
-				2F5D302399DC7A76EF6969AC852A696A /* NetLogger-umbrella.h */,
-				D3E210017A5A8A9608F34F8118A70496 /* ResourceBundle-NetLogger-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NetLogger";
-			sourceTree = "<group>";
-		};
-		AFB2A2E68F61D18255529063897EB693 /* Pods-NetLogger_Example */ = {
-			isa = PBXGroup;
-			children = (
-				14D389D454B7A1052E0FB51D08EFB29E /* Info.plist */,
-				5F3D9175A110E3FE7A8659872D952E58 /* Pods-NetLogger_Example.modulemap */,
-				5331B58197E4FF8E9080DA1F0440FA0C /* Pods-NetLogger_Example-acknowledgements.markdown */,
-				27C37247B4A532E16E06E353F2244984 /* Pods-NetLogger_Example-acknowledgements.plist */,
-				77E2E4C89DBCAF348D8B1FC60DE06B2C /* Pods-NetLogger_Example-dummy.m */,
-				FB83AA90576D63370C61623D30A9905E /* Pods-NetLogger_Example-frameworks.sh */,
-				55A295425A44A96D93F25537BB8AFF46 /* Pods-NetLogger_Example-resources.sh */,
-				6E3EDEFC6AE4693D825D7DC43558991E /* Pods-NetLogger_Example-umbrella.h */,
-				46066C2FB551446BC4A92A25C5DAFC3A /* Pods-NetLogger_Example.debug.xcconfig */,
-				B4ECF8A2D8083D051CF1F737F57D1D8F /* Pods-NetLogger_Example.release.xcconfig */,
-			);
-			name = "Pods-NetLogger_Example";
-			path = "Target Support Files/Pods-NetLogger_Example";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D1D1CD29F103069618EE02581E6FB309 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				15C3150E412D89EC6DD0B745899E643A /* Images.xcassets */,
-			);
-			name = Assets;
-			path = NetLogger/Assets;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		DDCE4E7FCAC8D1D313C81AB84AE52CFE /* Pods-NetLogger_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7911443CF8EFD2854ABB1790E64A9320 /* Info.plist */,
-				49427F48146B67076A06314C3104B70D /* Pods-NetLogger_Tests.modulemap */,
-				252795B6D2280FE7A78D536873FFB88E /* Pods-NetLogger_Tests-acknowledgements.markdown */,
-				004BF5E9549B30D1521057FD8F2F7E8F /* Pods-NetLogger_Tests-acknowledgements.plist */,
-				E08FE1771C5E472CB7DF5D4B45DD103F /* Pods-NetLogger_Tests-dummy.m */,
-				0FE6DE71BD824A05FFCE9BF79B115F77 /* Pods-NetLogger_Tests-frameworks.sh */,
-				679C55641B53828A7679B1A399CBAE55 /* Pods-NetLogger_Tests-resources.sh */,
-				19975468565D7D76C802FC72897C7B75 /* Pods-NetLogger_Tests-umbrella.h */,
-				DD8BCFDA93C39EFFBEBB7A4D3EC4021F /* Pods-NetLogger_Tests.debug.xcconfig */,
-				A8362A33443BB3CDC7F02673A4C615BB /* Pods-NetLogger_Tests.release.xcconfig */,
+				27F070C94A37BDE7E82C4B157BC5069E /* Pods-NetLogger_Tests.modulemap */,
+				83960C298EC525920D67F10BD00FAC7D /* Pods-NetLogger_Tests-acknowledgements.markdown */,
+				DAF8A571DC322E3B03525FA25700B2B4 /* Pods-NetLogger_Tests-acknowledgements.plist */,
+				63C5BF3E400276540B553F2536FFFD4C /* Pods-NetLogger_Tests-dummy.m */,
+				4D8503A7E221DF2017A1E3CB27B51BF0 /* Pods-NetLogger_Tests-Info.plist */,
+				5FB25F550898CC2251256267AC4DADA9 /* Pods-NetLogger_Tests-umbrella.h */,
+				771106E1A7EE1CD81D02B30A5D68C90F /* Pods-NetLogger_Tests.debug.xcconfig */,
+				01D593C36397118D6F03D360F8C9AE97 /* Pods-NetLogger_Tests.release.xcconfig */,
 			);
 			name = "Pods-NetLogger_Tests";
 			path = "Target Support Files/Pods-NetLogger_Tests";
 			sourceTree = "<group>";
 		};
+		745C03677E1596EE135E736908383EC8 /* Pods-NetLogger_Example */ = {
+			isa = PBXGroup;
+			children = (
+				483B41BBC310E98A64CEB6384CBE10A3 /* Pods-NetLogger_Example.modulemap */,
+				2A84CC2C5FD44E195F00A1680488C712 /* Pods-NetLogger_Example-acknowledgements.markdown */,
+				66736291B7BFD8B71A73EDACAD597233 /* Pods-NetLogger_Example-acknowledgements.plist */,
+				FE088FD75D3E292F29D1670C37BA4C9F /* Pods-NetLogger_Example-dummy.m */,
+				BBAF45FAC62CF6D700010BF5E2388D0F /* Pods-NetLogger_Example-frameworks.sh */,
+				B094A3D59DA97AA9A18FE6F37DFC8A19 /* Pods-NetLogger_Example-Info.plist */,
+				A0B486C3CDA4A55DF68E7FD1184C400E /* Pods-NetLogger_Example-umbrella.h */,
+				DA3C62AB351FB3050E9553F1FAA54B96 /* Pods-NetLogger_Example.debug.xcconfig */,
+				CCD4C981A10DC588A2CC04CFAC8EB620 /* Pods-NetLogger_Example.release.xcconfig */,
+			);
+			name = "Pods-NetLogger_Example";
+			path = "Target Support Files/Pods-NetLogger_Example";
+			sourceTree = "<group>";
+		};
+		8DEB08B9DA69E4489203991FFB29F876 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D6A136AD42B84EA127E70D4065E662E /* NetLogger.modulemap */,
+				8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */,
+				9566D794F5E85F5AF2964FBC5AE754CF /* NetLogger-dummy.m */,
+				92630EAA05212C6791C91DC0B9AAF0E4 /* NetLogger-Info.plist */,
+				CDAB70D51A686D0185CF8B714751F71D /* NetLogger-prefix.pch */,
+				5DD7185C4C53439152B1461FCDEC1F0D /* NetLogger-umbrella.h */,
+				9C74E2DB3E77F7FFF00C390F26E2C645 /* ResourceBundle-NetLogger-NetLogger-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NetLogger";
+			sourceTree = "<group>";
+		};
+		9B1B3DB03E185DFFE95955940A4DE2CB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB9299BF7C6C8DDE3FB63216EF7C1A69 /* NetLogger */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A8285FA3CC61DC88FE1EF4780F548D74 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E79F84009686E2E9FB041C419D67FF02 /* Images.xcassets */,
+			);
+			name = Assets;
+			path = NetLogger/Assets;
+			sourceTree = "<group>";
+		};
+		AB9299BF7C6C8DDE3FB63216EF7C1A69 /* NetLogger */ = {
+			isa = PBXGroup;
+			children = (
+				A1DFB96F2414C9B1D84880DF15F63ADE /* NetLogger.h */,
+				DE7AC22C9EA994FDB53F837B13989BAB /* NetLogger.m */,
+				BA67F42720AA2C2A1E0BA7E6E519D1B2 /* NetRecorder.h */,
+				31283FAEEDFB0221E0C2DDC47255D425 /* NetRecorder.m */,
+				33EA4EAB86777688965E4DA39465E084 /* NLBaseViewController.h */,
+				8C2B3B1FC10B1F9534087E3EC924B804 /* NLBaseViewController.m */,
+				3F2D55E89C4F95CB313229AC6543866E /* NLConstants.h */,
+				9AE8C39600072961704811D3227E8C0B /* NLOverlayViewController.h */,
+				F5FDF17FB191F36B35F313B709920F52 /* NLOverlayViewController.m */,
+				A373419134B39AB695E5DD67462998E1 /* NLRequestDetailViewController.h */,
+				6B9F6D981A6745F9228BBD1DAF25DB91 /* NLRequestDetailViewController.m */,
+				23BB73FD4FE6F4F0EAC552DC9DFE3E3B /* NLRequestListViewController.h */,
+				D4BAC522E60BB7DD5DD046E1FC44A7AA /* NLRequestListViewController.m */,
+				18A6C7A254B516552F00B06CD9DE1133 /* NLWindow.h */,
+				E27BC4C154ADA5809619155F4001FDAF /* NLWindow.m */,
+				8D93DD31504EEBE4C918492553E35149 /* NSURLSession+Observer.h */,
+				915BB4F5966110D3330E157846FC5EDE /* NSURLSession+Observer.m */,
+				54E1D3F38940A59B572010AF46A4DF8E /* ResponseBodyTableViewCell.h */,
+				29DF3E1C2C7D1B263538D8AF09D506D6 /* ResponseBodyTableViewCell.m */,
+				D801CA4D6096ACB667F8288717C231BC /* Pod */,
+				3923FE9BAF4FCC28E9E58D0044190963 /* Resources */,
+				8DEB08B9DA69E4489203991FFB29F876 /* Support Files */,
+			);
+			name = NetLogger;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B9208B8481243490B9EC3D0247316DB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB085F42F1A2BBD4083EF3D132CBE5E /* NetLogger.bundle */,
+				DE489E51B20914DE4B58650DD1FC7027 /* NetLogger.framework */,
+				D7D94B222E73C79D90E63258D733D406 /* Pods_NetLogger_Example.framework */,
+				3FA84829669114F4EB7E0F4B2DE25154 /* Pods_NetLogger_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				9B1B3DB03E185DFFE95955940A4DE2CB /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B9208B8481243490B9EC3D0247316DB4 /* Products */,
+				0B239963C8591C4F926A5437348AF48D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D801CA4D6096ACB667F8288717C231BC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F66328BBD5D2BED5B8F2B8F182C0CF81 /* LICENSE */,
+				7BD45B1B5D227FF779FC5664ADE90F42 /* NetLogger.podspec */,
+				EBBDE2C43AF41E19EE3ACD4CCE1C0A86 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		321B8193CF09C79C970B35D3CF7660A9 /* Headers */ = {
+		0B1B5766AC0E4E532DE3F82EC9E03B95 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6754464DB31CE4F3E4C0B4C3F10EF374 /* Pods-NetLogger_Example-umbrella.h in Headers */,
+				AACE0969C6D3968F805C7CD7A6D87697 /* Pods-NetLogger_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37E0206340F35EB0D9C82287F0C3F7FB /* Headers */ = {
+		3FA3337282820A927E2CD84F4E993653 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56E0616A1EA1BA6587FDDBADE7A0CDBE /* NetLogger-umbrella.h in Headers */,
-				A423B57C89BEB858E36A12103DC4A2DC /* NetLogger.h in Headers */,
-				FA6B41C1745A60EF1E522BC1281A8F27 /* NetRecorder.h in Headers */,
-				39D3E45ECE6727E756AAF5BFFA6DBAD5 /* NLBaseViewController.h in Headers */,
-				4F3F77DE7F55AFBBDE5772E98DB83369 /* NLConstants.h in Headers */,
-				B3D4C14A9A0103993CEE7ABBBC28B8C7 /* NLOverlayViewController.h in Headers */,
-				02FF31168D8ADEFDB46D39A3345F9A10 /* NLRequestDetailViewController.h in Headers */,
-				CDA752D6F1A9DFC56000ABCB9531CFBB /* NLRequestListViewController.h in Headers */,
-				352C365C05B57F9DD1DD8930E3115949 /* NLWindow.h in Headers */,
-				5E214AD01B4AF47E3740D4A6A7D5A001 /* NSURLSession+Observer.h in Headers */,
-				864C02F05EADD93A48E1761B02EA236B /* ResponseBodyTableViewCell.h in Headers */,
+				2C218DD7C1DBFCBF38BE98FA31915AE9 /* NetLogger-umbrella.h in Headers */,
+				E8784B0AB119EEF698263100B8C70CF0 /* NetLogger.h in Headers */,
+				8F58F6D05DB96663D592BEA328F4D96C /* NetRecorder.h in Headers */,
+				0E16C6523620AFD8E92CD30C5FF2EEFA /* NLBaseViewController.h in Headers */,
+				BA3C19AD14BF32CD17B849187C2348B2 /* NLConstants.h in Headers */,
+				4A73FA594A6B52C2DF75B2E011D32CFC /* NLOverlayViewController.h in Headers */,
+				AD602BC419F7F57F2B014F3D20F2C712 /* NLRequestDetailViewController.h in Headers */,
+				F5EA9D74E82AC9067DA291BE1C6E0888 /* NLRequestListViewController.h in Headers */,
+				8FED38B013990762266C4ADD5A3249DE /* NLWindow.h in Headers */,
+				2EF05EAC9EDA30A7D2402CE6D8CCB193 /* NSURLSession+Observer.h in Headers */,
+				957C328617D4F4F2222F51CBFCD00EAF /* ResponseBodyTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		873C59781D8BAA377264D27DBE9D9DA2 /* Headers */ = {
+		EC250CB33BE98D2D023645BC514ADB5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8819B3CF80C8CD5B67F5D76A32B313C0 /* Pods-NetLogger_Tests-umbrella.h in Headers */,
+				3B9A0335CA888A24EA4B2A40220761B2 /* Pods-NetLogger_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		260D7EA0FAD34116A839B47E71FF0AF6 /* NetLogger-NetLogger */ = {
+		309C69ED4CDF4EFA6FF19573FEDF3BF9 /* Pods-NetLogger_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8E40180CCAC1182DAD0FB93D6E774CD /* Build configuration list for PBXNativeTarget "NetLogger-NetLogger" */;
+			buildConfigurationList = 8F7844A6A58738B46A8CE58083C8BEE2 /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Example" */;
 			buildPhases = (
-				8DDE3B71477BEEB420848104EE3F9DCB /* Sources */,
-				4D713518C6FE1716A455AA6419CF171D /* Frameworks */,
-				B5A1D0771DF47579F3B4C311FC7B7C45 /* Resources */,
+				EC250CB33BE98D2D023645BC514ADB5E /* Headers */,
+				813AB838C51C27FD4DB61E21310E79BC /* Sources */,
+				00BF2CFD76788E1E3F60C61283CC2CA1 /* Frameworks */,
+				C3121A6D9FA6EA7A2F597B290A39165C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F0ACA9CB699EA64A3D29B120F9B0767 /* PBXTargetDependency */,
+			);
+			name = "Pods-NetLogger_Example";
+			productName = "Pods-NetLogger_Example";
+			productReference = D7D94B222E73C79D90E63258D733D406 /* Pods_NetLogger_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		357944341B55CE97EA3A7E19F6BDEA62 /* NetLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF57A158ED4248AAFB52099D9DEECD44 /* Build configuration list for PBXNativeTarget "NetLogger" */;
+			buildPhases = (
+				3FA3337282820A927E2CD84F4E993653 /* Headers */,
+				4F693EAF2F5896BDFD77051D95CD4E31 /* Sources */,
+				77487F9EE39D95CFF2C12D25B96425FD /* Frameworks */,
+				E448E0558B21AD138FD610A1DE15DDE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				703F95B22B6FEBF40BE4956603B34DD3 /* PBXTargetDependency */,
+			);
+			name = NetLogger;
+			productName = NetLogger;
+			productReference = DE489E51B20914DE4B58650DD1FC7027 /* NetLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		468CC83AA7A24279420F64D74524D6E9 /* Pods-NetLogger_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98B4866405E7C13BA2510F6DCF3AC40B /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Tests" */;
+			buildPhases = (
+				0B1B5766AC0E4E532DE3F82EC9E03B95 /* Headers */,
+				3D434CFFC541ECCB4A1C6B2D0BA896E1 /* Sources */,
+				A4F02D7510B404C186D53041C1F807C4 /* Frameworks */,
+				A723A544A471B66390A78F1DB278E679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D8D8DD2CC7A0DEFCC20C6658D872F89 /* PBXTargetDependency */,
+			);
+			name = "Pods-NetLogger_Tests";
+			productName = "Pods-NetLogger_Tests";
+			productReference = 3FA84829669114F4EB7E0F4B2DE25154 /* Pods_NetLogger_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF141DBF943F76D5CCFBC050939C7D5A /* NetLogger-NetLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFBBEA22FEE88406915C94FC5EAE8D6B /* Build configuration list for PBXNativeTarget "NetLogger-NetLogger" */;
+			buildPhases = (
+				43EFF5889C7A5273804243C88481D1AB /* Sources */,
+				4DF29AC1D6BF21979CFDE7370D043912 /* Frameworks */,
+				3ACEF80960571B168C69B3CC479215B9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -374,177 +446,212 @@
 			);
 			name = "NetLogger-NetLogger";
 			productName = "NetLogger-NetLogger";
-			productReference = 3250ED4207ED5634D7E9CC086A5889ED /* NetLogger.bundle */;
+			productReference = BAB085F42F1A2BBD4083EF3D132CBE5E /* NetLogger.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		9783BB8E815B53168E932ACBFC5B9ABD /* NetLogger */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D0805BFBAD5DA21D2017953A6327929 /* Build configuration list for PBXNativeTarget "NetLogger" */;
-			buildPhases = (
-				CA205DD95728061C37B67F6F748724FE /* Sources */,
-				5B684A8205755121B49324C2A41038DE /* Frameworks */,
-				27DED135C21CB7CA4495B72CC7C116FA /* Resources */,
-				37E0206340F35EB0D9C82287F0C3F7FB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D640019A1D71D868164F704D149E9D49 /* PBXTargetDependency */,
-			);
-			name = NetLogger;
-			productName = NetLogger;
-			productReference = DC24ED094EE0F8F4A72CFB994D1FCE85 /* NetLogger.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E749D69EE21977710BCE0C5D9A7A95ED /* Pods-NetLogger_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3222C46FF9639BE95EB74DBF44C991E /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Tests" */;
-			buildPhases = (
-				656BCF70970121EFE876E27CE229D6B1 /* Sources */,
-				A5DCBB0D269D8669B24F3CABFE91EC8D /* Frameworks */,
-				873C59781D8BAA377264D27DBE9D9DA2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NetLogger_Tests";
-			productName = "Pods-NetLogger_Tests";
-			productReference = 35A1553DAAE0C7DAF86F7B1C8CC2E11A /* Pods_NetLogger_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F4D15018C6CC4559F5B9F96F1B34B890 /* Pods-NetLogger_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DB8A87654E1943ABF88B2E55C2F8F13 /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Example" */;
-			buildPhases = (
-				8922F560AA4C82D4A98A24A8476B1CB2 /* Sources */,
-				F76E5ECDABEDF3294EC6007FD04C0109 /* Frameworks */,
-				321B8193CF09C79C970B35D3CF7660A9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				004436878217FC62F7F29D8DBD4BF9B9 /* PBXTargetDependency */,
-			);
-			name = "Pods-NetLogger_Example";
-			productName = "Pods-NetLogger_Example";
-			productReference = D27E02FC64F049970B85F20043F9FD7B /* Pods_NetLogger_Example.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3956518560DACA286689E5D4F1289575 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B9208B8481243490B9EC3D0247316DB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9783BB8E815B53168E932ACBFC5B9ABD /* NetLogger */,
-				260D7EA0FAD34116A839B47E71FF0AF6 /* NetLogger-NetLogger */,
-				F4D15018C6CC4559F5B9F96F1B34B890 /* Pods-NetLogger_Example */,
-				E749D69EE21977710BCE0C5D9A7A95ED /* Pods-NetLogger_Tests */,
+				357944341B55CE97EA3A7E19F6BDEA62 /* NetLogger */,
+				BF141DBF943F76D5CCFBC050939C7D5A /* NetLogger-NetLogger */,
+				309C69ED4CDF4EFA6FF19573FEDF3BF9 /* Pods-NetLogger_Example */,
+				468CC83AA7A24279420F64D74524D6E9 /* Pods-NetLogger_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27DED135C21CB7CA4495B72CC7C116FA /* Resources */ = {
+		3ACEF80960571B168C69B3CC479215B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483E90B0B7DEC970EE6CC6D8D6BCE85F /* NetLogger.bundle in Resources */,
+				3C5CB84203EE4B60360358EB55BC9443 /* Images.xcassets in Resources */,
+				87F714D4552D06B02D060DFAC84BCE2E /* NLOverlayViewController.xib in Resources */,
+				2D7AD4642BBFC9EE15B4406E09E8D391 /* NLRequestDetailViewController.xib in Resources */,
+				DD7A1FA53456C5470C38B6FAA156F5EF /* NLRequestsViewController.xib in Resources */,
+				4222291C74C0430F27B0893E6A5556F4 /* ResponseBodyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5A1D0771DF47579F3B4C311FC7B7C45 /* Resources */ = {
+		A723A544A471B66390A78F1DB278E679 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC31C39EED357173B0283AF86CAF10D1 /* Images.xcassets in Resources */,
-				DBE27D4FE020F419567291811A2E4EC7 /* NLOverlayViewController.xib in Resources */,
-				C3677912F6B0E527CE7423D0BF8EE414 /* NLRequestDetailViewController.xib in Resources */,
-				DD5F9339B7592AB66328EC0CD233730A /* NLRequestsViewController.xib in Resources */,
-				C337842CD3A0387AA5B654D5D77CA4C2 /* ResponseBodyTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3121A6D9FA6EA7A2F597B290A39165C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E448E0558B21AD138FD610A1DE15DDE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DAF12509BA0D128365039A05FBFD84 /* NetLogger.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		656BCF70970121EFE876E27CE229D6B1 /* Sources */ = {
+		3D434CFFC541ECCB4A1C6B2D0BA896E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CC642954EDCEAA118E633BFFCF9D90 /* Pods-NetLogger_Tests-dummy.m in Sources */,
+				1D1186AEFAFB749F7FC7255DC2566077 /* Pods-NetLogger_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8922F560AA4C82D4A98A24A8476B1CB2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAE18088B4AC36C8CD657A0C5BA8F3E4 /* Pods-NetLogger_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DDE3B71477BEEB420848104EE3F9DCB /* Sources */ = {
+		43EFF5889C7A5273804243C88481D1AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA205DD95728061C37B67F6F748724FE /* Sources */ = {
+		4F693EAF2F5896BDFD77051D95CD4E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD956E772A5CCACE506DDC54587FE74 /* NetLogger-dummy.m in Sources */,
-				CC0556FAD7927BF89354B2F554EED4B6 /* NetLogger.m in Sources */,
-				4C607D1B01E908F706307CA0E4E9784A /* NetRecorder.m in Sources */,
-				793E2E279B58E059D748B33CAF3FE1E2 /* NLBaseViewController.m in Sources */,
-				FB7AEFAB50B9AEAC074CE4C774D14EE4 /* NLOverlayViewController.m in Sources */,
-				235E895708FD8904CAA962548585EE1B /* NLRequestDetailViewController.m in Sources */,
-				E59563D63B1F6FA31522F0CC9AF36C72 /* NLRequestListViewController.m in Sources */,
-				49B8F1B0D5ADDB07A321BDA516AEC7B0 /* NLWindow.m in Sources */,
-				812E6A524CA6605B07C017DF5E4AC96D /* NSURLSession+Observer.m in Sources */,
-				857AD7557FFC6CA4B92A451D0122126C /* ResponseBodyTableViewCell.m in Sources */,
+				DB060FC380835694935DF10F4A1A795F /* NetLogger-dummy.m in Sources */,
+				55258E8C33568C0A4E5D1BD318013E35 /* NetLogger.m in Sources */,
+				B2B66101C4BB9857EA03DBBB55AF58C3 /* NetRecorder.m in Sources */,
+				621A998BA56F2BE0B88C61AAAE9137CD /* NLBaseViewController.m in Sources */,
+				4209DCD8E65373DEDC35F5D957CBA18B /* NLOverlayViewController.m in Sources */,
+				9AA8ACA4E69EACCAB9F8B4F6E91079EB /* NLRequestDetailViewController.m in Sources */,
+				9C0725EF171E0AA4EABA9616AEA04C0A /* NLRequestListViewController.m in Sources */,
+				6976002EFFA6F9D530CB2409907F7F6E /* NLWindow.m in Sources */,
+				2018D5BDAEFC4308E3DDC82293E9CC4B /* NSURLSession+Observer.m in Sources */,
+				06C741A846BEB9E04B8BAD15557A76C5 /* ResponseBodyTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813AB838C51C27FD4DB61E21310E79BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6531FCA3903F6A94A6FAC846067B2163 /* Pods-NetLogger_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		004436878217FC62F7F29D8DBD4BF9B9 /* PBXTargetDependency */ = {
+		0F0ACA9CB699EA64A3D29B120F9B0767 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NetLogger;
-			target = 9783BB8E815B53168E932ACBFC5B9ABD /* NetLogger */;
-			targetProxy = 621B872E77933D89EB362D08784B9529 /* PBXContainerItemProxy */;
+			target = 357944341B55CE97EA3A7E19F6BDEA62 /* NetLogger */;
+			targetProxy = F595FA85C7ED5EF36BC901957CA551AD /* PBXContainerItemProxy */;
 		};
-		D640019A1D71D868164F704D149E9D49 /* PBXTargetDependency */ = {
+		6D8D8DD2CC7A0DEFCC20C6658D872F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NetLogger_Example";
+			target = 309C69ED4CDF4EFA6FF19573FEDF3BF9 /* Pods-NetLogger_Example */;
+			targetProxy = 096E4B02E6F72E7668417B1C128BAC6F /* PBXContainerItemProxy */;
+		};
+		703F95B22B6FEBF40BE4956603B34DD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "NetLogger-NetLogger";
-			target = 260D7EA0FAD34116A839B47E71FF0AF6 /* NetLogger-NetLogger */;
-			targetProxy = AFD595B3FEA27D27A81FA4652F0AD4CB /* PBXContainerItemProxy */;
+			target = BF141DBF943F76D5CCFBC050939C7D5A /* NetLogger-NetLogger */;
+			targetProxy = 8B4AF25FDF926521A7482EE4D362BC4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ABDF3C845EF4BD22C089223C8EC41E2 /* Debug */ = {
+		22886B0C76486E7C0BA6F710006276EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */;
+			baseConfigurationReference = 8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NetLogger";
+				IBSC_MODULE = NetLogger;
+				INFOPLIST_FILE = "Target Support Files/NetLogger/ResourceBundle-NetLogger-NetLogger-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = NetLogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7E81BC0D466D4183554E6EDA5AD74C64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NetLogger";
+				IBSC_MODULE = NetLogger;
+				INFOPLIST_FILE = "Target Support Files/NetLogger/ResourceBundle-NetLogger-NetLogger-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = NetLogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		87BF99F3ACAD551B8C9218EE5D8C949D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D593C36397118D6F03D360F8C9AE97 /* Pods-NetLogger_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		945ACCCCBFCCBFE0C5673D211BB80645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -556,11 +663,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/NetLogger/NetLogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NetLogger/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/NetLogger/NetLogger-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NetLogger/NetLogger.modulemap";
+				PRODUCT_MODULE_NAME = NetLogger;
 				PRODUCT_NAME = NetLogger;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -571,23 +679,7 @@
 			};
 			name = Debug;
 		};
-		19B9C211AF0E5097C98B1D5DCA24A331 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NetLogger";
-				INFOPLIST_FILE = "Target Support Files/NetLogger/ResourceBundle-NetLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = NetLogger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -597,10 +689,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -608,6 +702,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -616,7 +711,66 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -637,20 +791,23 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		3BA55017B8B3D5445D4B739103CCAEC9 /* Release */ = {
+		C220E66B2110D0ECB87E09CA29E2C438 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8362A33443BB3CDC7F02673A4C615BB /* Pods-NetLogger_Tests.release.xcconfig */;
+			baseConfigurationReference = CCD4C981A10DC588A2CC04CFAC8EB620 /* Pods-NetLogger_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -660,95 +817,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NetLogger_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		74AB33193AE4BAED3C8D48ECD7C359AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4ECF8A2D8083D051CF1F737F57D1D8F /* Pods-NetLogger_Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Example/Pods-NetLogger_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -758,7 +827,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NetLogger_Example;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -768,25 +837,42 @@
 			};
 			name = Release;
 		};
-		8A330F22E8622B48942FD3EF07FE8DED /* Release */ = {
+		D465040D10C91EA2364C975083E43574 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */;
+			baseConfigurationReference = 771106E1A7EE1CD81D02B30A5D68C90F /* Pods-NetLogger_Tests.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/NetLogger";
-				INFOPLIST_FILE = "Target Support Files/NetLogger/ResourceBundle-NetLogger-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = NetLogger;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		AC36E75A5D1E301D8B1BCCE77456D549 /* Release */ = {
+		ECA2EA5157824D1AB0DC3F17183EC7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C20C68D4F262EA53EC02D8DA566DD3 /* NetLogger.xcconfig */;
+			baseConfigurationReference = 8BC4B9BC853C4CC57149A7BAA1EE2B74 /* NetLogger.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -798,11 +884,12 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/NetLogger/NetLogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NetLogger/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/NetLogger/NetLogger-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NetLogger/NetLogger.modulemap";
+				PRODUCT_MODULE_NAME = NetLogger;
 				PRODUCT_NAME = NetLogger;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -814,10 +901,11 @@
 			};
 			name = Release;
 		};
-		B1713281FC632FAB92727347DFB2E2A0 /* Debug */ = {
+		F58800438E3C41FB4BF2300E60B6B032 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46066C2FB551446BC4A92A25C5DAFC3A /* Pods-NetLogger_Example.debug.xcconfig */;
+			baseConfigurationReference = DA3C62AB351FB3050E9553F1FAA54B96 /* Pods-NetLogger_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -827,7 +915,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Example/Pods-NetLogger_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -837,39 +925,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NetLogger_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CE155450453A72E68EFBE3BCBF045B7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD8BCFDA93C39EFFBEBB7A4D3EC4021F /* Pods-NetLogger_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NetLogger_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NetLogger_Tests/Pods-NetLogger_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NetLogger_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -881,52 +937,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D0805BFBAD5DA21D2017953A6327929 /* Build configuration list for PBXNativeTarget "NetLogger" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ABDF3C845EF4BD22C089223C8EC41E2 /* Debug */,
-				AC36E75A5D1E301D8B1BCCE77456D549 /* Release */,
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		8F7844A6A58738B46A8CE58083C8BEE2 /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
-				731DC216E1A58545B559F6E0A2418060 /* Release */,
+				F58800438E3C41FB4BF2300E60B6B032 /* Debug */,
+				C220E66B2110D0ECB87E09CA29E2C438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DB8A87654E1943ABF88B2E55C2F8F13 /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Example" */ = {
+		98B4866405E7C13BA2510F6DCF3AC40B /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1713281FC632FAB92727347DFB2E2A0 /* Debug */,
-				74AB33193AE4BAED3C8D48ECD7C359AF /* Release */,
+				D465040D10C91EA2364C975083E43574 /* Debug */,
+				87BF99F3ACAD551B8C9218EE5D8C949D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3222C46FF9639BE95EB74DBF44C991E /* Build configuration list for PBXNativeTarget "Pods-NetLogger_Tests" */ = {
+		AFBBEA22FEE88406915C94FC5EAE8D6B /* Build configuration list for PBXNativeTarget "NetLogger-NetLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE155450453A72E68EFBE3BCBF045B7C /* Debug */,
-				3BA55017B8B3D5445D4B739103CCAEC9 /* Release */,
+				22886B0C76486E7C0BA6F710006276EE /* Debug */,
+				7E81BC0D466D4183554E6EDA5AD74C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8E40180CCAC1182DAD0FB93D6E774CD /* Build configuration list for PBXNativeTarget "NetLogger-NetLogger" */ = {
+		DF57A158ED4248AAFB52099D9DEECD44 /* Build configuration list for PBXNativeTarget "NetLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19B9C211AF0E5097C98B1D5DCA24A331 /* Debug */,
-				8A330F22E8622B48942FD3EF07FE8DED /* Release */,
+				945ACCCCBFCCBFE0C5673D211BB80645 /* Debug */,
+				ECA2EA5157824D1AB0DC3F17183EC7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

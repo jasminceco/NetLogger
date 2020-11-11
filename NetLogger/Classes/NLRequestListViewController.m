@@ -162,10 +162,10 @@
         
          if (![httpReq isKindOfClass:[NSNull class]] && httpReq.statusCode >= 200 && httpReq.statusCode < 300)
          {
-               accessoryView.backgroundColor = [UIColor systemGreenColor];
+               accessoryView.backgroundColor = [UIColor greenColor];
          }
          else{
-             accessoryView.backgroundColor = [UIColor systemRedColor];
+             accessoryView.backgroundColor = [UIColor redColor];
          }
         
     }
